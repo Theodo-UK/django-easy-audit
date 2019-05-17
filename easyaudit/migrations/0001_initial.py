@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('event_type', models.SmallIntegerField(choices=[(1, b'Create'), (2, b'Update'), (3, b'Delete')])),
-                ('object_id', models.IntegerField()),
+                ('object_id', models.TextField()),
                 ('object_repr', models.CharField(max_length=255, null=True, blank=True)),
                 ('object_json_repr', models.TextField(null=True, blank=True)),
                 ('datetime', models.DateTimeField(auto_now_add=True)),
